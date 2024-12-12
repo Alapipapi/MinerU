@@ -186,10 +186,8 @@ def doc_analyze(
     if lang == '':
         lang = None
 
-    # model_manager = ModelSingleton()
-    # custom_model = model_manager.get_model(ocr, show_log, lang, layout_model, formula_enable, table_enable)
-    
-    custom_model = custom_model_init(ocr, show_log, lang, layout_model, formula_enable, table_enable)
+    model_manager = ModelSingleton()
+    custom_model = model_manager.get_model(ocr, show_log, lang, layout_model, formula_enable, table_enable)
 
     model_json = []
     doc_analyze_start = time.time()
